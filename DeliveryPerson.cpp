@@ -1,19 +1,14 @@
 // DeliveryPerson.cpp
+
 #include "DeliveryPerson.h"
 #include <iostream>
 
-// Constructor definition
-DeliveryPerson::DeliveryPerson(const std::string& username, const std::string& password, const std::string& vehicleType)
-    : User(username, password), vehicleType(vehicleType) {}
+DeliveryPerson::DeliveryPerson(const std::string& name, const std::string& phone, const std::string& vehicle)
+    : name(name), phoneNumber(phone), vehicle(vehicle) {}
 
-// Destructor definition
-DeliveryPerson::~DeliveryPerson() {
-    // Optional: cleanup code
-    std::cout << "DeliveryPerson object destroyed." << std::endl;
-}
-
-// Display info method
 void DeliveryPerson::displayInfo() const {
-    User::displayInfo();  // Assuming User class has displayInfo method
-    std::cout << "Vehicle Type: " << vehicleType << std::endl;
+    std::cout << "Delivery Person Info:\n";
+    std::cout << "Name: " << name << "\n";
+    std::cout << "Phone: " << phoneNumber << "\n";
+    std::cout << "Vehicle: " << vehicle << "\n";
 }

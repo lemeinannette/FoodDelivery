@@ -5,6 +5,7 @@
 #include "Restaurant.h"
 #include "FoodOrder.h"
 #include "Food.h"
+#include "DeliveryPerson.h"
 
 int main() {
     std::string username, password, address, phone;
@@ -35,13 +36,16 @@ int main() {
     restaurant.addMenuItem(burger);
     restaurant.addMenuItem(soda);
 
-    // Create a food order
-    FoodOrder foodOrder(restaurant, customer);
+    // Create a delivery person
+    DeliveryPerson deliveryPerson("John Smith", "987-654-3210", "Bike");
 
-    // Add food to order
+    // Create a food order
+    FoodOrder foodOrder(restaurant, customer, deliveryPerson);
+
+    // Clearer food selection
     int foodChoice;
     do {
-        std::cout << "Menu: \n";
+        std::cout << "\nMenu: \n";
         restaurant.displayMenu();
         std::cout << "Enter the number of the food item you want to order (0 to finish): ";
         std::cin >> foodChoice;

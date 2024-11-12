@@ -1,19 +1,21 @@
 // DeliveryPerson.h
+
 #ifndef DELIVERYPERSON_H
 #define DELIVERYPERSON_H
 
-#include "User.h"  // Assuming DeliveryPerson inherits from User
 #include <string>
 
-class DeliveryPerson : public User {
+class DeliveryPerson {
 private:
-    std::string vehicleType;
+    std::string name;
+    std::string phoneNumber;
+    std::string vehicle;
 
 public:
-    DeliveryPerson(const std::string& username, const std::string& password, const std::string& vehicleType);
-    ~DeliveryPerson();  // Destructor
+    // Constructor
+    DeliveryPerson(const std::string& name, const std::string& phone, const std::string& vehicle);
 
-    void displayInfo() const;  // Method to display info
+    void displayInfo() const;  // Display delivery person details
 };
 
 #endif
