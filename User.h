@@ -9,12 +9,15 @@ protected:
     std::string password;
 
 public:
+    // Constructor
     User(const std::string& uname, const std::string& pwd);
 
-    // Getter for username
-    std::string getUsername() const;
+    virtual ~User();  // Virtual destructor
 
     virtual void displayInfo() const;  // Virtual function for polymorphism
+
+    // Getter for username
+    std::string getUsername() const;  // Add this getter function
 };
 
 #endif

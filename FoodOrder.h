@@ -18,6 +18,7 @@ public:
     void addFoodToOrder(const Food& food);
     void finalizeOrder();
     void displayOrderDetails() const;
+    double calculateTotalPrice() const;  // Add this function declaration
 };
 
 #endif
